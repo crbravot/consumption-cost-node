@@ -23,6 +23,7 @@ function getParams(req) {
 
 module.exports = function(context, req) {
     var creds = getCreds();
+    console.log(creds);
     var costCalculator = new BillingCostCalculator(creds.clientId, creds.clientSecret, creds.tenantId, creds.subscriptionId, creds.offerId);
     
     var params = getParams(req);
